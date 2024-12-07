@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reboque 24 Horas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-truck-fast" id="nav_logo"> Reboque 24 Horas</i>
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#menu">Transporte</a></li>
+                <li class="nav-item"><a href="#testimonials">Avaliações</a></li>
+            </ul>
+            <button class="btn-default">Solicitar Atendimento</button>
+            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#menu">Transporte</a></li>
+                <li class="nav-item"><a href="#testimonials">Avaliações</a></li>
+            </ul>
+            <button class="btn-default">Solicitar Atendimento</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">O Socorro que vai até <span>você</span></h1>
+                <p class="description">
+                    Atendimento 24 horas, garantindo rapidez, segurança e eficiência para ajudar você em qualquer situação.
+                </p>
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">Ver Serviços</a>
+                    <a href="tel:+55(85)99769-4774" id="phone_button">
+                        <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
+                        (85) 99769-4774
+                    </a>
+                </div>
+                <div class="social-media-buttons">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+       <section id="menu">
+    <h2 class="section-title">Reboque</h2>
+    <h3 class="section-subtitle">Nossos tipos de atendimento</h3>
+    <div id="dishes">
+        <!-- Serviço para Motos -->
+        <div class="dish">
+            <div class="dish-heart"><i class="fa-solid fa-hourglass-half"></i></div>
+            <img src="src/images/dish.png" class="dish-image" alt="Imagem do serviço para motos">
+            <h3 class="dish-title">Motos</h3>
+            <span class="dish-description">Atendimento rápido e seguro para motos em qualquer situação.</span>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="dish-price">
+                <h4>Valor a combinar</h4>
+                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+        <!-- Serviço para Carros -->
+        <div class="dish">
+            <div class="dish-heart"><i class="fa-solid fa-car"></i></div>
+            <img src="src/images/dish2.png" class="dish-image" alt="Imagem do serviço para carros">
+            <h3 class="dish-title">Carros</h3>
+            <span class="dish-description">Soluções de reboque confiáveis para carros, garantindo segurança e eficiência.</span>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="dish-price">
+                <h4>Valor a combinar</h4>
+                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+        <!-- Serviço para Equipamentos -->
+        <div class="dish">
+            <div class="dish-heart"><i class="fa-solid fa-toolbox"></i></div>
+            <img src="src/images/dish3.png" class="dish-image" alt="Imagem do serviço para equipamentos">
+            <h3 class="dish-title">Equipamentos</h3>
+            <span class="dish-description">Transporte especializado para equipamentos e máquinas de pequeno porte.</span>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="dish-price">
+                <h4>Valor a combinar</h4>
+                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+        <!-- Serviço para Caminhões de pequeno porte -->
+        <div class="dish">
+            <div class="dish-heart"><i class="fa-solid fa-truck"></i></div>
+            <img src="src/images/dish4.png" class="dish-image" alt="Imagem do serviço para caminhões de pequeno porte">
+            <h3 class="dish-title">Caminhões de pequeno porte</h3>
+            <span class="dish-description">Especialistas em transporte seguro e eficiente para caminhões leves.</span>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="dish-price">
+                <h4>Valor a combinar</h4>
+                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="testimonials">
+            <img src="src/images/chef.png" id="testimonial_chef" alt="">
+            <div id="testimonials_content">
+                <h2 class="section-title">Depoimentos</h2>
+                <h3 class="section-subtitle">O que nossos clientes dizem</h3>
+                <div id="feedbacks">
+                    <!-- Feedback de clientes -->
+                    <div class="feedback">
+                        <img src="src/images/avatar.png" class="feedback-avatar" alt="Avatar cliente">
+                        <div class="feedback-content">
+                            <p>Marcos Antonio 
+                                <span>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>"Excelente trabalho! Serviço rápido, seguro e de qualidade. Recomendo."</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-default">Ver mais avaliações</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+        <div id="footer_items">
+            <span id="copyright">&copy; 2024 Davi Cardoso</span>
+            <div class="social-media-buttons">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
