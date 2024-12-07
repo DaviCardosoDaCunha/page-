@@ -72,7 +72,42 @@
             </div>
             <div class="dish-price">
                 <h4>Valor a combinar</h4>
-                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+                <!-- Botão personalizado -->
+<button class="btn-default" id="whatsappButton"><i class="fa-solid fa-basket-shopping"></i></button>
+
+<script>
+  document.getElementById("whatsappButton").addEventListener("click", () => {
+    // Número de telefone no formato internacional
+    const phoneNumber = "5585997694774";
+
+    // Mensagem predefinida
+    const message = encodeURIComponent(
+      "Olá, estou precisando de um reboque, poderia me ajudar?"
+    );
+
+    // Verificar se o navegador suporta a API de geolocalização
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Criar o link com a localização
+          const locationLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+          const fullMessage = `${message}${locationLink}`;
+
+          // Abrir o WhatsApp com a mensagem e localização
+          window.open(`https://wa.me/${phoneNumber}?text=${fullMessage}`, "_blank");
+        },
+        (error) => {
+          alert("Não foi possível acessar sua localização. Por favor, tente novamente.");
+        }
+      );
+    } else {
+      alert("Seu navegador não suporta geolocalização.");
+    }
+  });
+</script>
             </div>
         </div>
         <!-- Serviço para Carros -->
@@ -88,7 +123,42 @@
             </div>
             <div class="dish-price">
                 <h4>Valor a combinar</h4>
-                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+               <!-- Botão personalizado -->
+<button class="btn-default" id="whatsappButton"><i class="fa-solid fa-basket-shopping"></i></button>
+
+<script>
+  document.getElementById("whatsappButton").addEventListener("click", () => {
+    // Número de telefone no formato internacional
+    const phoneNumber = "5585997694774";
+
+    // Mensagem predefinida
+    const message = encodeURIComponent(
+      "Olá, estou precisando de um reboque, poderia me ajudar?"
+    );
+
+    // Verificar se o navegador suporta a API de geolocalização
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Criar o link com a localização
+          const locationLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+          const fullMessage = `${message}${locationLink}`;
+
+          // Abrir o WhatsApp com a mensagem e localização
+          window.open(`https://wa.me/${phoneNumber}?text=${fullMessage}`, "_blank");
+        },
+        (error) => {
+          alert("Não foi possível acessar sua localização. Por favor, tente novamente.");
+        }
+      );
+    } else {
+      alert("Seu navegador não suporta geolocalização.");
+    }
+  });
+</script>
             </div>
         </div>
         <!-- Serviço para Equipamentos -->
@@ -104,7 +174,42 @@
             </div>
             <div class="dish-price">
                 <h4>Valor a combinar</h4>
-                <button class="btn-default"><i class="fa-solid fa-basket-shopping"></i></button>
+                <!-- Botão personalizado -->
+<button class="btn-default" id="whatsappButton"><i class="fa-solid fa-basket-shopping"></i></button>
+
+<script>
+  document.getElementById("whatsappButton").addEventListener("click", () => {
+    // Número de telefone no formato internacional
+    const phoneNumber = "5585997694774";
+
+    // Mensagem predefinida
+    const message = encodeURIComponent(
+      "Olá, estou precisando de um reboque, poderia me ajudar?"
+    );
+
+    // Verificar se o navegador suporta a API de geolocalização
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Criar o link com a localização
+          const locationLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+          const fullMessage = `${message}${locationLink}`;
+
+          // Abrir o WhatsApp com a mensagem e localização
+          window.open(`https://wa.me/${phoneNumber}?text=${fullMessage}`, "_blank");
+        },
+        (error) => {
+          alert("Não foi possível acessar sua localização. Por favor, tente novamente.");
+        }
+      );
+    } else {
+      alert("Seu navegador não suporta geolocalização.");
+    }
+  });
+</script>
             </div>
         </div>
         <!-- Serviço para Caminhões de pequeno porte -->
@@ -130,7 +235,7 @@
 
     // Mensagem predefinida
     const message = encodeURIComponent(
-      "Olá, estou precisando de um reboque, poderia me ajudar? Meu veículo é de grande porte. Minha localização é: "
+      "Olá, estou precisando de um reboque, poderia me ajudar?"
     );
 
     // Verificar se o navegador suporta a API de geolocalização
