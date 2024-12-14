@@ -49,10 +49,7 @@
     box-shadow: none;
 }
 
-@media screen and (max-width: 5870px)
-        #banner {
-        display: block; /* Garante que o banner permaneça visível */
-    }
+@media screen and (max-width: 5870px) {
 
     #banner img {
         display: block; /* Garante que as imagens não sejam ocultadas */
