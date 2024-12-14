@@ -49,6 +49,7 @@
     box-shadow: none;
 }
 
+@media screen and (max-width: 5870px)
         #banner {
         display: block; /* Garante que o banner permaneça visível */
     }
@@ -70,6 +71,7 @@
     text-align: center;     /* Alinha o texto ao centro, se houver */
     }
 
+}
 
 
 @media screen and (max-width: 450px) {
