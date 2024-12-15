@@ -49,6 +49,29 @@
     box-shadow: none;
 }
 
+/* Regras para dispositivos maiores (Desktop) */
+#banner {
+    display: block; /* Garante que o banner permaneça visível */
+}
+
+#banner img {
+    display: block; /* Garante que as imagens não sejam ocultadas */
+    max-width: 100%; /* Adiciona responsividade */
+    height: auto;
+}
+
+#home {
+    min-height: 100%;
+    padding-top: 0px;
+
+    /* Adicionando centralização */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    text-align: center;     /* Alinha o texto ao centro, se houver */
+}
+
+/* Regras para dispositivos móveis */
 @media screen and (max-width: 1170px) {
     #home {
         min-height: 100%;
@@ -58,7 +81,7 @@
     #banner,
     #banner img,
     #home .shape {
-        display: none;
+        display: none; /* Oculta elementos específicos no celular */
     }
 
     #cta {
@@ -68,6 +91,11 @@
     }
 }
 
+@media screen and (max-width: 1170px) {
+    #home {
+        display: block !important; /* Sobrescreve qualquer regra conflitante */
+    }
+}
 
 @media screen and (max-width: 450px) {
     #phone_button button {
