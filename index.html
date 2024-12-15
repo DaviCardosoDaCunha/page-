@@ -146,6 +146,7 @@ function sendWhatsAppMessage(service) {
     const phoneNumber = "5585997694774";
     const baseMessage = `Olá, estou precisando de um reboque para ${service}, poderia me ajudar?`;
     
+    // Verifica se o navegador suporta geolocalização
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -153,11 +154,20 @@ function sendWhatsAppMessage(service) {
                 const longitude = position.coords.longitude;
                 const locationLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
                 const fullMessage = `${baseMessage} Minha localização é: ${locationLink}`;
+                // Envia mensagem para WhatsApp com localização
                 window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`, "_blank");
             },
-            () => {
-                const fallbackMessage = `${baseMessage} Não consegui compartilhar minha localização.`;
-                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(fallbackMessage)}`, "_blank");
+            (error) => {
+                // Trata erros ao acessar a localização
+                let errorMessage = `${baseMessage} Não consegui compartilhar minha localização.`;
+                if (error.code === error.PERMISSION_DENIED) {
+                    errorMessage += " Acesso à localização foi negado.";
+                } else if (error.code === error.POSITION_UNAVAILABLE) {
+                    errorMessage += " Localização não está disponível.";
+                } else if (error.code === error.TIMEOUT) {
+                    errorMessage += " Tempo esgotado ao tentar obter a localização.";
+                }
+                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(errorMessage)}`, "_blank");
             }
         );
     } else {
